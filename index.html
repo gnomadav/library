@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Библиотека</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body data-theme="light">
+
+  <!-- header -->
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__brand">
+        <h1 class="header__title">The Library</h1>
+      </div>
+      <nav class="header__nav">
+        <button class="nav-btn active" data-tab="search">Search</button>
+        <button class="nav-btn" data-tab="favorites">
+          Favorites
+          <span class="fav-count" id="favCount">0</span>
+        </button>
+      </nav>
+      <div class="header__controls">
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+          <span class="theme-icon">◒</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- main content -->
+  <main class="main">
+
+    <!-- search section -->
+    <section class="tab-panel active" id="tab-search">
+      <div class="search-panel">
+        <div class="search-hero">
+          <p class="search-subtitle">Discover your next great read</p>
+        </div>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search th books by title or author..."
+            autocomplete="off"
+          />
+          <button class="search-btn" id="searchBtn">Search</button>
+        </div>
+        <div class="filter-bar">
+          <label class="filter-label">Filter by author:</label>
+          <input
+            type="text"
+            id="authorFilter"
+            class="filter-input"
+            placeholder="..."
+          />
+        </div>
+      </div>
+
+      <!-- status messages -->
+      <div class="status" id="status"></div>
+
+      <!-- sesults grid -->
+      <div class="books-grid" id="resultsGrid"></div>
+    </section>
+
+    <!-- savorites section -->
+    <section class="tab-panel" id="tab-favorites">
+      <div class="section-header">
+        <h2 class="section-title">Your Favorites</h2>
+        <p class="section-sub">Favorite books</p>
+      </div>
+      <div class="books-grid" id="favoritesGrid"></div>
+      <div class="status" id="favStatus"></div>
+    </section>
+
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
