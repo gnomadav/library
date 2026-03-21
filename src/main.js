@@ -70,6 +70,8 @@ searchInput.addEventListener('keydown', function(e) {
 searchInput.addEventListener('input', debounce(function() { //because of debounce we start the search after 0.5s
   if (searchInput.value.trim().length >= 3) { //here we can choose min letters fo the search 
     handleSearch();
+  }else{
+    showStatus(statusEl,"Write more then 3 letters for better searching..","info")
   }
 }, 500));
 
